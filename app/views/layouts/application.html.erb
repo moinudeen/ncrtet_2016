@@ -7,7 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html"><%# image_tag "Untitled.png", size: "50x50" %><span style="font-size:30px;">NCRTET 2016</span></a>
+              </div>
+              <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li class=<%if controller.action_name == "home" %>"active" <%end%> ><%= link_to "Home",home_path %></li>
+                      <li class=<%if controller.action_name == "call_for_papers" %>"active" <%end%> ><%= link_to "Info Log", call_for_papers_path %></li>
+                      <li class=<%if controller.action_name == "important_dates" %>"active" <%end%> ><%= link_to "Important Dates", important_dates_path %></li>
+                      <li class=<%if controller.action_name == "commitee" %>"active" <%end%> ><%= link_to "Committee", commitee_path %></li>
+                      <li class=<%if controller.action_name == "venue_and_contact" %>"active" <%end%> ><%= link_to "Venue and Contact", venue_and_contact_path %></li>
+                      <li class=<%if controller.action_name == "new" %>"active" <%end%> ><%= link_to "Sign In", new_user_session_path %></li>
+                  </ul>
+              </div>
+          </div><br>
+      </header>
 <%= yield %>
 
 </body>

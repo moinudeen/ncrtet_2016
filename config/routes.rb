@@ -1,10 +1,24 @@
 Rails.application.routes.draw do
+
+  # get "credits" => "static_pages#credits"
+  # get "download_doc" => "static_pages#download_doc"
+
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  # get "selection" => "static_pages#selection"
+  # get "sign_in" => "devise/sessions#new"
+  get "home" => "static_pages#home"
+  get "call_for_papers" => "static_pages#call_for_papers"
+  get "important_dates" => "static_pages#important_dates"
+  # get "paper_ethics" => "static_pages#paper_ethics"
+  get "commitee" => "static_pages#commitee"
+  get "venue_and_contact" => "static_pages#venue_and_contact"
+  # get "download_pdf" => "static_pages#download_pdf"
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
