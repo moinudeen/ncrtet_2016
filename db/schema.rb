@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20160115155619) do
     t.string   "mobile_number"
     t.string   "college_name"
     t.string   "designation"
-    t.string   "dropbox_session"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
