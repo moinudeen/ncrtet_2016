@@ -1,6 +1,7 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 <h1>Uploaded Papers</h1>
-  <table class="table">
+  <table class="table table-hover table-bordered">
     <thead>
       <tr>
         <th>Paper Number</th>
@@ -40,4 +41,5 @@
 </table>
 <br>
 
-<%= link_to 'New Paper', new_paper_path, id: "col" %><br>
+<%= link_to 'New Paper', new_paper_path, id: "col", class: "btn btn-success" %><br>
+</div>

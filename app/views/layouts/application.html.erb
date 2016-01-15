@@ -25,7 +25,12 @@
                       <li class=<%if controller.action_name == "important_dates" %>"active" <%end%> ><%= link_to "Important Dates", important_dates_path %></li>
                       <li class=<%if controller.action_name == "commitee" %>"active" <%end%> ><%= link_to "Committee", commitee_path %></li>
                       <li class=<%if controller.action_name == "venue_and_contact" %>"active" <%end%> ><%= link_to "Venue and Contact", venue_and_contact_path %></li>
-                      <li class=<%if controller.action_name == "new" %>"active" <%end%> ><%= link_to "Sign In", new_user_session_path %></li>
+                       <% if !user_signed_in? %>
+                        <li class=<%if controller.action_name == "new" %>"active" <%end%> ><%= link_to "Sign In", new_user_session_path %></li>
+                      <% else %>
+                        <li class=<%if controller.controller_name == "papers" %>"active" <%end%> ><%= link_to "Upload your paper", papers_path %></li>
+                        <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+                      <% end %>
                   </ul>
               </div>
           </div><br>

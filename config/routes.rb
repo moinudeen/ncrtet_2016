@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :papers
   # get "credits" => "static_pages#credits"
   # get "download_doc" => "static_pages#download_doc"
