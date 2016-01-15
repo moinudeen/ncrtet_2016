@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<h1>Uploaded Papers</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Paper Number</th>
+        <th>Type of conference</th>
+        <th>Paper title</th>
+        <th>Full Paper</th>
+        <th>Edited Paper</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @papers.each do |paper| %>
+      <% if current_user.id == paper.user_id %>
+        <tr>
+          <td><%= paper.paper_number %></td>
+          <td><%= paper.type_of_conference %></td>
+          <td><%= paper.paper_title %></td>
+          <td><%= link_to "#{paper.paper_version1_file_name}", paper.paper_version1.url(download: true) %></td>
+          <td>
+            <% if paper.paper_version2_file_size != nil %>
+              <%= link_to "#{paper.paper_version2_file_name}", paper.paper_version2.url(download: true) %>
+            <% else %>
+               NA
+            <% end %>
+          </td>
+          <td>
+            <% if paper.paper_version2_file_size == nil %>
+               <%= link_to 'Add Paper V2', edit_paper_path(paper) %>
+            <% else %>
+                <%= link_to 'Modify Paper V2', edit_paper_path(paper) %>
+            <% end %>
+            <% end %>
+        </td>
+      </tr>
+    <% end %>
+</tbody>
+</table>
+<br>
+
+<%= link_to 'New Paper', new_paper_path, id: "col" %><br>

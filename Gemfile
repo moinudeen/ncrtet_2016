@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'validates_phone_number'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip-dropbox", ">= 1.1.7"
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

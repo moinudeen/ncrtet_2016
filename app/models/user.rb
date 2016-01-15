@@ -3,5 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates :mobile_number, format: { with: /\d{10}/, message: "bad format" }
+  #regex = /\d{10}/
+  #validates :mobile_number, format: { with: regex, message: "bad format" }
+#  validates :mobile_number, :phone_number => {:ten_digits => true}
+  has_many :papers
 end
