@@ -28,7 +28,7 @@
                        <% if !user_signed_in? %>
                         <li class=<%if controller.action_name == "new" %>"active" <%end%> ><%= link_to "Sign In", new_user_session_path %></li>
                       <% else %>
-	                	<li><%= link_to "Event Registration", payment_details_path %></li>
+                        <li><%= link_to "Download payment details", payment_details_path %></li>
                         <li class=<%if controller.controller_name == "papers" %>"active" <%end%> ><%= link_to "Upload your paper", papers_path %></li>
                         <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
                       <% end %>

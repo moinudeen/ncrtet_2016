@@ -28,7 +28,7 @@
  .container {
    padding: 1em;
  }
-.bbb .field  {
+.bbb .field f.label {
 color:white;
 }
  .timeline {
