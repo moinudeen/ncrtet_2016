@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :papers
   # get "credits" => "static_pages#credits"
   # get "download_doc" => "static_pages#download_doc"
-  resources :payment_details, except: [:show, :destroy, :update,:edit ]
+
 
 devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
