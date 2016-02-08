@@ -3,6 +3,7 @@ class PaymentDetailsController < ApplicationController
   before_action :authenticate_user!
   respond_to :html
 
+
   def index
     @payment_details = PaymentDetail.all
     if current_user.email != "admin@ncrtet2015.com"
@@ -65,6 +66,28 @@ class PaymentDetailsController < ApplicationController
     respond_with(@payment_detail)
   end
 
+  def pdf
+
+  #  respond_to do |format|
+  #     format.html
+  #     format.pdf do
+  #       render pdf: "file_name"   # Excluding ".pdf" extension.
+  #     end
+  #   end
+
+  html = render_to_string(:action => :pdf)
+
+ pdf = WickedPdf.new.pdf_from_string(html)
+
+ save_path = Rails.root.join('public','ticket.pdf')
+
+ File.open(save_path, 'wb') do |file|
+
+  file << pdf
+end
+end
+
+
   private
     def set_payment_detail
       @payment_detail = PaymentDetail.find(params[:id])
@@ -73,4 +96,6 @@ class PaymentDetailsController < ApplicationController
     def payment_detail_params
       params.require(:payment_detail).permit(:amount, :dd_number, :bank, :branch,:dd_copy)
     end
+
+
 end

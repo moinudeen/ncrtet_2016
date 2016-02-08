@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>ICRTET2016</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,6 +9,8 @@
 <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
+<% if params[:action] != "pdf" %>
+
   <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
           <div class="container">
               <div class="navbar-header">
@@ -36,8 +39,8 @@
                   </ul>
               </div>
           </div><br>
-      </header>
- <%= yield %>
+      </header><%end%>
+ <%= yield %><% if params[:action] != "pdf" %>
 <footer id="footer" class="midnight-blue">
       <div class="container">
           <div class="row">
@@ -46,6 +49,6 @@
               </div>
           </div>
       </div>
-  </footer>
+  </footer><%end%>
 </body>
 </html>

@@ -16,6 +16,7 @@ devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out =
   # get "paper_ethics" => "static_pages#paper_ethics"
   get "commitee" => "static_pages#commitee"
   get "venue_and_contact" => "static_pages#venue_and_contact"
+  get "pdf" => "payment_details#pdf"
   # get "download_pdf" => "static_pages#download_pdf"
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

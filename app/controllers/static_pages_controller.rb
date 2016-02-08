@@ -19,4 +19,5 @@ class StaticPagesController < ApplicationController
 
   def selections
   end
+
 end
