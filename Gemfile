@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem "figaro"
 gem 'validates_phone_number'
 gem "paperclip"
 gem "paperclip-dropbox", ">= 1.1.7"
@@ -45,7 +45,7 @@ gem 'rails_admin'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'foreman'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
