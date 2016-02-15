@@ -2,14 +2,7 @@ class PaymentDetailsController < ApplicationController
   before_action :set_payment_detail, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   respond_to :html
-
-
-
-
-
-
-
-  def index
+def index
     @payment_details = PaymentDetail.all
     if current_user.email != "admin@ncrtet2015.com"
       if @payment_details.find_by_user_id(current_user.id)
@@ -96,8 +89,14 @@ class PaymentDetailsController < ApplicationController
 
  File.open(save_path, 'wb') do |file|
 
-  file << pdf
-end
+   file << pdf
+ end
+ send_file(
+   "#{Rails.root}/public/ticket.pdf",
+   filename: "ticket.pdf",
+   type: "application/pdf"
+ )   
+
 end
 
 
