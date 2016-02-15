@@ -30,7 +30,7 @@ class PapersController < ApplicationController
     @paper.save
     respond_to do |format|
       if @paper.save
-        format.html { redirect_to @paper, notice: 'Paper was successfully created.' }
+        format.html { redirect_to papers_path, notice: 'Paper was successfully created.' }
         format.json { render :show, status: :created, location: @paper }
       else
         format.html { render :new }

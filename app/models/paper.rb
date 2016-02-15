@@ -1,13 +1,7 @@
 class Paper < ActiveRecord::Base
   belongs_to :user
-  has_attached_file :paper_version1,
-	:storage => :dropbox,
-	:dropbox_credentials => Rails.root.join("config/dropbox.yml"),
-	:dropbox_visibility => 'public'
-  has_attached_file :paper_version2,
-	:storage => :dropbox,
-	:dropbox_credentials => Rails.root.join("config/dropbox.yml"),
-	:dropbox_visibility => 'public'
+  has_attached_file :paper_version1
+  has_attached_file :paper_version2
   do_not_validate_attachment_file_type :paper_version1
 	do_not_validate_attachment_file_type :paper_version2
   validates_presence_of :paper_tile, :abstract, :type_of_conference, :paper_version1
