@@ -4,6 +4,11 @@ class PaymentDetailsController < ApplicationController
   respond_to :html
 
 
+
+
+
+
+
   def index
     @payment_details = PaymentDetail.all
     if current_user.email != "admin@ncrtet2015.com"
@@ -28,6 +33,14 @@ class PaymentDetailsController < ApplicationController
     @payment_detail = PaymentDetail.new
 
     respond_with(@payment_detail)
+  end
+
+ def download_pdf
+  send_file(
+    "#{Rails.root}/public/ticket.pdf",
+    filename: "ticket.pdf",
+    type: "application/pdf"
+  )
   end
 
   def edit

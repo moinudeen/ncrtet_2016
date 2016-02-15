@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :papers
+
   # get "credits" => "static_pages#credits"
   # get "download_doc" => "static_pages#download_doc"
-  resources :payment_details, except: [:show, :destroy, :update,:edit ]
-
+  resources :payment_details, except: [:show, :destroy, :update,:edit]
 devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # get "selection" => "static_pages#selection"
@@ -17,7 +17,8 @@ devise_for :user, :path => '', :path_names => { :sign_in => "login", :sign_out =
   get "commitee" => "static_pages#commitee"
   get "venue_and_contact" => "static_pages#venue_and_contact"
   get "pdf" => "payment_details#pdf"
-  # get "download_pdf" => "static_pages#download_pdf"
+
+   get "download_pdf" => "payment_details#download_pdf"
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'static_pages#home'

@@ -32,10 +32,10 @@
 </table>
 
 <br>
-
+<%= link_to "Download your ticket",download_pdf_path	 %>
 <% else %>
   <h1>Listing Payment Details</h1>
-  <%= link_to "Export", payment_details_path(format: "xlsx") %>
+
 
 <table class="table">
   <thead>
@@ -70,10 +70,12 @@
         <td><%= payment_detail.bank %></td>
         <td><%= payment_detail.branch %></td>
         <td><%= payment_detail.amount %></td>
-        <td><%= link_to "Download", payment_detail.dd_copy.url(download: true) %></td>
+
       </tr>
     <% end %>
     
   </tbody>
 </table>
+
+
 <% end %>
