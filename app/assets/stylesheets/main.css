@@ -102,7 +102,7 @@ body > section {
 .green-sea h1,
 .sun-flower h1,
 .orange h1,
-.emerald h1,
+
 .nephrits h1,
 .carrot h1,
 .pumkin h1,
@@ -121,7 +121,7 @@ body > section {
 .green-sea h2,
 .sun-flower h2,
 .orange h2,
-.emerald h2,
+
 .nephrits h2,
 .carrot h2,
 .pumkin h2,
@@ -140,7 +140,7 @@ body > section {
 .green-sea h3,
 .sun-flower h3,
 .orange h3,
-.emerald h3,
+
 .nephrits h3,
 .carrot h3,
 .pumkin h3,
@@ -159,7 +159,7 @@ body > section {
 .green-sea h4,
 .sun-flower h4,
 .orange h4,
-.emerald h4,
+
 .nephrits h4,
 .carrot h4,
 .pumkin h4,
@@ -178,7 +178,7 @@ body > section {
 .green-sea h5,
 .sun-flower h5,
 .orange h5,
-.emerald h5,
+
 .nephrits h5,
 .carrot h5,
 .pumkin h5,
@@ -197,7 +197,7 @@ body > section {
 .green-sea h6,
 .sun-flower h6,
 .orange h6,
-.emerald h6,
+
 .nephrits h6,
 .carrot h6,
 .pumkin h6,
@@ -218,7 +218,7 @@ body > section {
 .green-sea small,
 .sun-flower small,
 .orange small,
-.emerald small,
+
 .nephrits small,
 .carrot small,
 .pumkin small,
@@ -235,6 +235,8 @@ body > section {
 .asbestos small {
   color: rgba(255, 255, 255, 0.8);
 }
+.emerald small{color: #fff}
+.emerald h1,.emerald h2, .emerald h3,.emerald h4,.emerald h5,.emerald h6{color:#D2DEE0}
 .turquoise {
   background-color: #1abc9c;
 }
@@ -248,7 +250,7 @@ body > section {
   background-color: #f39c12;
 }
 .emerald {
-  background-color: #2ecc71;
+  background-color: #3B4F61;
 }
 .nephritis {
   background-color: #27ae60;
