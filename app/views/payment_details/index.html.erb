@@ -1,8 +1,10 @@
 <% if current_user.email != "admin@ncrtet2015.com" %>
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Payment Details</h1>
 
+<div class="table table-hover table-bordered ">
 <table class="table">
   <thead>
     <tr>
@@ -30,9 +32,9 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-<%= link_to "Download your ticket",pdf_path	 %>
+<%= link_to "Download your ticket",pdf_path	,class: "btn btn-success" %></div>
 <% else %>
   <h1>Listing Payment Details</h1>
 
