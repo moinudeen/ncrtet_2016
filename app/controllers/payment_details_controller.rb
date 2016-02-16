@@ -43,11 +43,9 @@ def index
     @payment_detail = PaymentDetail.new(payment_detail_params)
     @payment_detail.user_id = current_user.id
     if current_user.designation == "  Student  "
-      @payment_detail.amount = 600
-    elsif current_user.designation == "  Faculty  "
-      @payment_detail.amount = 800
-    elsif current_user.designation == "  Delegate  "
       @payment_detail.amount = 1000
+    elsif current_user.designation == "  Faculty  " || current_user.designation == "  Delegate  "
+      @payment_detail.amount = 1500
     end
     @payment_detail.save
     if @payment_detail.save
@@ -95,7 +93,7 @@ def index
    "#{Rails.root}/public/ticket.pdf",
    filename: "ticket.pdf",
    type: "application/pdf"
- )   
+ )
 
 end
 
