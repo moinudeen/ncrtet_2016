@@ -5,13 +5,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
+  address: "smtp.mandrillapp.com",
   port: 587,
-  domain: ENV["GMAIL_DOMAIN"],
+  domain: "icrtet2016.com",
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
+  password: "08oLxYm0pPB7hp5QnrTTxA"
   }
 
   # In the development environment your application's code is reloaded on
