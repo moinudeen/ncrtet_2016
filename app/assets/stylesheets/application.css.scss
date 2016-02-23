@@ -158,3 +158,8 @@ color:white;
      color: #468847;
      text-align: left;
   }
+  header{
+     // Animation
+     -webkit-transition: all 1s ease;
+     transition: all 1s ease;
+  }
