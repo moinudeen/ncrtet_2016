@@ -18,7 +18,7 @@ Procfile
 # Ignore application configuration
 /config/application.yml
 #Tickets need not be uploaded
-public/ticket.pdf
+public/ticket*
 
-#System files 
+#System files
 public/system

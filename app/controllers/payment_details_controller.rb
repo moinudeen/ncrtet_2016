@@ -30,7 +30,7 @@ def index
 
  def download_pdf
   send_file(
-    "#{Rails.root}/public/ticket.pdf",
+    "#{Rails.root}/public/ticket#{current_user.id}.pdf",
     filename: "ticket.pdf",
     type: "application/pdf"
   )
@@ -57,6 +57,7 @@ def index
     else
       # flash[:notice] = "Post successfully created"
     end
+    pdf
     redirect_to payment_details_path
   end
 
@@ -78,23 +79,13 @@ def index
   #       render pdf: "file_name"   # Excluding ".pdf" extension.
   #     end
   #   end
-
+  render :layout => false
   html = render_to_string(:action => :pdf)
-
- pdf = WickedPdf.new.pdf_from_string(html)
-
- save_path = Rails.root.join('public','ticket.pdf')
-
- File.open(save_path, 'wb') do |file|
-
-   file << pdf
- end
- send_file(
-   "#{Rails.root}/public/ticket.pdf",
-   filename: "ticket.pdf",
-   type: "application/pdf"
- )
-
+  pdf = WickedPdf.new.pdf_from_string(html)
+  save_path = Rails.root.join('public',"ticket#{current_user.id}.pdf")
+  File.open(save_path, 'wb') do |file|
+    file << pdf
+  end
 end
 
 

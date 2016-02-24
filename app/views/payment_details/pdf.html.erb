@@ -1,26 +1,34 @@
+<html>
+<head>
 
-      <center>
-
-        <br>
-     
-
-      <h2>
-          International Conference in Recent Trends and Engineering Technology
-      </h2>
-      <h4>Organized by</h4>
-      <h2>
-          St.Joseph's Institue of Technology
-      </h2></center><div style="padding-left:200px;">
-<h3>Your Conference Ticket</h3>
-      <h3>Your Details:</h3>
-      <table style="font-size:15pt">
-    <tr>  <td> First Name: </td><td> <%= current_user.first_name%></td>
-        <tr>   <tr> <td> Last Name: </td><td> <%= current_user.last_name%></td></tr>
-        <tr> <td> Email id:  </td><td><%= current_user.email%></td></tr>
-<tr><td> DD Number: </td><td><%= current_user.payment_detail.dd_number%></td></tr>
+  <title>ICRTET2016</title>
+  <meta charset='utf-8' />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+</head>
+<body>
+<div class="container">
+<table>
+<td><%= wicked_pdf_image_tag "sjit.png" %></td>
+<td>
+  <center>
+    <h2 >International Conference in Recent Trends and Engineering Technology</h2>
+    <h4>Organized by</h4>
+    <h2>St.Joseph's Institue of Technology</h2><br><br>
+    <h3>Conference Ticket</h3>
+  </center>
+</td>
+<td><%= wicked_pdf_image_tag "icrtet.png" %></td>
 </table>
-<br>Bring a copy of this while coming to the conference.<br>
-<h3>Rules</h3>
+<div class="col-md-12">
+    <b>First Name</b>  :  <%= current_user.first_name%><br>
+    <b>Last Name</b>   :  <%= current_user.last_name%><br>
+    <b>Email id</b>    :  <%= current_user.email%><br>
+    <b>DD Number</b>   :  <%= current_user.payment_detail.dd_number%><br>
+    <b>Amount</b>      :  <%= current_user.payment_detail.amount %><br>
+<br><b>Bring a copy of this while coming to the conference.</b><br>
+<h3>General Information</h3>
 <h4>
   Submission of Papers</h4>
 <ul>
@@ -30,11 +38,10 @@
 <li>      Double blind peer reviews will be followed.</li>
 <li>      Registrations must be done online and a scanned copy of the Demand Draft must be enclosed with it.</li>
 <li>      The DD must be drawn in favour of "St.Joseph's Institute of Technology", payable within Chennai at any nationalised bank.</li>
-<li>      Selected papers will be pubished in the International Journal of Advances in Engineering, Research (IJAER).</li>
+<li>      Selected papers will be pubished in Annexure I/Annexure II.</li>
 </ul>
-<ul>
 <h4>Event Registration</h4>
-
+<ul>
 <li>    The Demand Draft for the required amount must be drawn.</li>
 <li>    The DD number must be entered along with the name of the bank and branch.</li>
 <li>    The scanned copy of the DD must be uploaded.</li>
@@ -43,4 +50,6 @@
 
 
 </div>
-    
+</div>
+</body>
+</html>

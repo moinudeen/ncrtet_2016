@@ -23,22 +23,22 @@
   </b><br>
   <div class="field">
     <%= f.label :dd_number,"DD Number" %><br>
-    <%= f.text_field :dd_number %>
+    <%= f.text_field :dd_number,class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :bank,"Bank Name" %><br>
-    <%= f.text_field :bank %>
+    <%= f.text_field :bank,class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :branch %><br>
-    <%= f.text_field :branch %>
+    <%= f.text_field :branch,class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :dd_copy,"DD Number" %> <font style="color:red">*</font><br>
-    <%= f.file_field :dd_copy %>
+    <%= f.label :dd_copy,"DD Copy" %> <font style="color:red">*</font><br>
+    <%= f.file_field :dd_copy,class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit"%>
+    <%= f.submit "Submit", class: "btn btn-success"%>
   </div>
   <font style="color:red">*</font>  scan copy should be less than 1mb
 <% end %>
