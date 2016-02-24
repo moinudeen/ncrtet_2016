@@ -44,7 +44,7 @@ class PapersController < ApplicationController
   def update
     respond_to do |format|
       if @paper.update(paper_params)
-        format.html { redirect_to @paper, notice: 'Paper was successfully updated.' }
+        format.html { redirect_to papers_path, notice: 'Paper was successfully updated.' }
         format.json { render :show, status: :ok, location: @paper }
       else
         format.html { render :edit }

@@ -17,10 +17,12 @@ Procfile
 
 # Ignore application configuration
 /config/application.yml
-config/database.yml
+/config/database.yml
+/config/secrets.yml
 #Tickets need not be uploaded
 public/ticket*
 
 #System files
 public/system
+
 shared/*
