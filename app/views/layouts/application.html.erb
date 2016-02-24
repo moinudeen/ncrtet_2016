@@ -5,8 +5,8 @@
   <title>ICRTET2016</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-<link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <%= csrf_meta_tags %> 
+  <%= favicon_link_tag 'favicon.ico' %>
 <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:700italic' rel='stylesheet' type='text/css'>
 </head>
 <body style="padding-top:0px;">
@@ -26,7 +26,7 @@
 
     </div>
   </div>
-  <header class="navbar navbar-inverse wet-asphalt" role="banner">
+  <header class="navbar navbar-inverse wet-asphalt" role="banner" style="background-color:#34495E;border-color:#34495E;">
             <div class="container">
               <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

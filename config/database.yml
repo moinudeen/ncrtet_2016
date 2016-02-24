@@ -21,8 +21,8 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
   host: localhost
-  username: moinudeen
-  password: treeisgood
+  username: rails
+  password: sjit12345
 
 development:
   <<: *default
@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: ncrtet_2016_production
-  username: ncrtet_2016
+  username: rails
   password: <%= ENV['NCRTET_2016_DATABASE_PASSWORD'] %>
