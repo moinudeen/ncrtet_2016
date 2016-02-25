@@ -44,7 +44,7 @@ def index
     @payment_detail.user_id = current_user.id
     if current_user.designation == "  Student  "
       @payment_detail.amount = 1000
-    elsif current_user.designation == "  Faculty  " || current_user.designation == "  Delegate  "
+    elsif current_user.designation == "  Faculty  " || current_user.designation == "  Delegate  " || current_user.designation == "  Research Scholar  "
       @payment_detail.amount = 1500
     end
     @payment_detail.save

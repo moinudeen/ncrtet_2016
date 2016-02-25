@@ -4,7 +4,7 @@
 
     <h2>Sign up</h2>
     <br> <br>
-    
+
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :designation %><br />
-    <%= f.select :designation, options_for_select([['  Student  '],['  Faculty  '],['  Delegate  ']]),:size=> 30, class: "form-control", placeholder: "Designation" %>
+    <%= f.select :designation, options_for_select([['  Student  '],['  Faculty  '],['  Delegate  '],['  Research Scholar  ']]),:size=> 30, class: "form-control", placeholder: "Designation" %>
   </div><br/>
 
   <div class="actions">
