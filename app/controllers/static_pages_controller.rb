@@ -20,4 +20,12 @@ class StaticPagesController < ApplicationController
   def selections
   end
 
+  def brochure
+    send_file(
+      "#{Rails.root}/public/icrtet.pdf",
+      filename: "bro.pdf",
+      type: "application/pdf"
+    )
+  end
+
 end
