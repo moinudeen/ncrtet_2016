@@ -57,7 +57,13 @@ def index
     else
       # flash[:notice] = "Post successfully created"
     end
-    pdf
+    # render :layout => false
+    html = render_to_string(:action => :pdf,:layout => false)
+    pdf = WickedPdf.new.pdf_from_string(html)
+    save_path = Rails.root.join('public',"ticket#{current_user.id}.pdf")
+    File.open(save_path, 'wb') do |file|
+      file << pdf
+    end
     redirect_to payment_details_path
   end
 
@@ -80,12 +86,6 @@ def index
   #     end
   #   end
   render :layout => false
-  html = render_to_string(:action => :pdf)
-  pdf = WickedPdf.new.pdf_from_string(html)
-  save_path = Rails.root.join('public',"ticket#{current_user.id}.pdf")
-  File.open(save_path, 'wb') do |file|
-    file << pdf
-  end
 end
 
 
