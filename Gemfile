@@ -30,7 +30,7 @@ gem 'acts_as_xlsx'
 gem 'axlsx_rails'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
-
+gem 'magnific-popup-rails', '~> 1.1.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
