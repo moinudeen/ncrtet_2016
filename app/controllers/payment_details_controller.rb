@@ -4,6 +4,7 @@ class PaymentDetailsController < ApplicationController
   respond_to :html
 def index
     @journal = Journal.new
+    @journals = Journal.all
     @payment_details = PaymentDetail.all
     if current_user.email != "admin@ncrtet2015.com"
       if @payment_details.find_by_user_id(current_user.id)
@@ -97,7 +98,7 @@ end
     end
 
     def payment_detail_params
-      params.require(:payment_detail).permit(:amount, :dd_number, :bank, :branch,:dd_copy)
+      params.require(:payment_detail).permit(:amount, :dd_number, :bank, :branch,:dd_copy, :accept)
     end
 
 

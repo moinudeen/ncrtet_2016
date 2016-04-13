@@ -1,3 +1,6 @@
+<h2 class="center">Journal Registration:<br>
+<h4 class="center">Select the type of journal(Optional)</h4>
+</h2>
 <%= form_for(@journal) do |f| %>
   <% if @journal.errors.any? %>
     <div id="error_explanation">
@@ -12,22 +15,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :annexure_1 %><br>
     <%= f.check_box :annexure_1 %>
+    <%= f.label :annexure_1, "Updated  Annexure - I (Journal name will be informed latter based on scope of paper)" %>
   </div>
   <div class="field">
-    <%= f.label :annexure_2 %><br>
     <%= f.check_box :annexure_2 %>
+    <%= f.label :annexure_2, "Annexure-II (scopus indexed)" %>
   </div>
   <div class="field">
-    <%= f.label :others %><br>
-    <%= f.check_box :others %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.check_box :others%>
+    <%= f.label :others,"Other journal ( Doi indexed )"  %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Submit, class: "btn btn-success" %>
   </div>
 <% end %>

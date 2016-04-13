@@ -25,10 +25,12 @@ class JournalsController < ApplicationController
   # POST /journals.json
   def create
     @journal = Journal.new(journal_params)
-
+    @journal.save
+    @journal.user_id = current_user.id
+    @journal.save
     respond_to do |format|
       if @journal.save
-        format.html { redirect_to @journal, notice: 'Journal was successfully created.' }
+        format.html { redirect_to payment_details_path, notice: 'Journal Details were Successflly Updated' }
         format.json { render :show, status: :created, location: @journal }
       else
         format.html { render :new }
