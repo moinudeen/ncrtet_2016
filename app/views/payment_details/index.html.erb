@@ -1,7 +1,9 @@
 <% if current_user.email != "admin@ncrtet2015.com" %>
 <div class="container">
 <p id="notice"><%= notice %></p>
-
+<div>
+<%= render :partial => 'journals/form' %>
+</div>
 <h1>Listing Payment Details</h1>
 
 <div class="table table-hover table-bordered ">

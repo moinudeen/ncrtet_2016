@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115155619) do
+ActiveRecord::Schema.define(version: 20160413161209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "journals", force: :cascade do |t|
+    t.boolean  "annexure_1"
+    t.boolean  "annexure_2"
+    t.boolean  "others"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "journals", ["user_id"], name: "index_journals_on_user_id", using: :btree
 
   create_table "papers", force: :cascade do |t|
     t.string   "paper_tile"
@@ -53,6 +64,12 @@ ActiveRecord::Schema.define(version: 20160115155619) do
 
   add_index "payment_details", ["user_id"], name: "index_payment_details_on_user_id", using: :btree
 
+  create_table "tests", force: :cascade do |t|
+    t.boolean  "vijay"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -76,6 +93,7 @@ ActiveRecord::Schema.define(version: 20160115155619) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "journals", "users"
   add_foreign_key "papers", "users"
   add_foreign_key "payment_details", "users"
 end

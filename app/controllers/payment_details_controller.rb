@@ -3,6 +3,7 @@ class PaymentDetailsController < ApplicationController
   before_action :authenticate_user!
   respond_to :html
 def index
+    @journal = Journal.new
     @payment_details = PaymentDetail.all
     if current_user.email != "admin@ncrtet2015.com"
       if @payment_details.find_by_user_id(current_user.id)
@@ -23,6 +24,7 @@ def index
   end
 
   def new
+    @journals = Journal.all
     @payment_detail = PaymentDetail.new
 
     respond_with(@payment_detail)

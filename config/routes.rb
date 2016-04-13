@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :journals
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :papers
 

@@ -1,0 +1,33 @@
+<%= form_for(@journal) do |f| %>
+  <% if @journal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@journal.errors.count, "error") %> prohibited this journal from being saved:</h2>
+
+      <ul>
+      <% @journal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :annexure_1 %><br>
+    <%= f.check_box :annexure_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :annexure_2 %><br>
+    <%= f.check_box :annexure_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :others %><br>
+    <%= f.check_box :others %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
