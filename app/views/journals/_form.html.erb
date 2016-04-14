@@ -38,11 +38,11 @@
     <%= f.check_box :others%>
     <%= f.label :others,"International Journal of Advanced Research in Biology, Engineering, Science and Technology(2395-695X)"  %>
   </div>
-  <div class="actions">
       <% if ! @payment_details %>
-        Journal Selection can be done only after registering for the event.<br><br>
-        <%= f.submit :Submit, class: "btn btn-success disabled" %>
+        <b>Journal Selection can be done only after registering for the event.<br><br></b>
       <%else%>
+
+      <div class="actions">
         <%= f.submit :Submit, class: "btn btn-success" %>
       <% end %>
 

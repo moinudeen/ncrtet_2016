@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
 #  validates :mobile_number, :phone_number => {:ten_digits => true}
   has_many :papers
   has_one :payment_detail
+  has_one :journal
   validates_presence_of :first_name, :last_name, :mobile_number, :college_name, :designation
 end
