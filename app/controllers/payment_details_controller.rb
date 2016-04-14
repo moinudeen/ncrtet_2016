@@ -25,6 +25,7 @@ def index
   end
 
   def new
+    @journal = Journal.new
     @journals = Journal.all
     @payment_detail = PaymentDetail.new
 

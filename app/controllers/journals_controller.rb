@@ -15,6 +15,7 @@ class JournalsController < ApplicationController
   # GET /journals/new
   def new
     @journal = Journal.new
+    @payment_details = PaymentDetail.find_by_user_id(current_user.id)
   end
 
   # GET /journals/1/edit

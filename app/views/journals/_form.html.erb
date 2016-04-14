@@ -1,6 +1,7 @@
 <h2 class="center">Journal Registration:<br>
 <h4 class="center">Select the type of journal(Optional)</h4>
 </h2>
+<div class="center">
 <%= form_for(@journal) do |f| %>
   <% if @journal.errors.any? %>
     <div id="error_explanation">
@@ -27,6 +28,13 @@
     <%= f.label :others,"Other journal ( Doi indexed )"  %>
   </div>
   <div class="actions">
-    <%= f.submit :Submit, class: "btn btn-success" %>
+      <% if ! @payment_details %>
+        Journal Selection can be done only after registering for the event.<br><br>
+        <%= f.submit :Submit, class: "btn btn-success disabled" %>
+      <%else%>
+        <%= f.submit :Submit, class: "btn btn-success" %>
+      <% end %>
+
   </div>
+</div>
 <% end %>
