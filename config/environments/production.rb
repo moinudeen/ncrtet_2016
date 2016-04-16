@@ -8,14 +8,14 @@ Rails.application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   config.action_mailer.smtp_settings = {
-  address: "smtp.mandrillapp.com",
+  address: "smtp.gmail.com",
   port: 587,
   domain: "icrtet2016.com",
   #domain: ENV["GMAIL_DOMAIN"],
   authentication: "login",
   enable_starttls_auto: true,
   user_name: ENV["GMAIL_USERNAME"],
-  password: "08oLxYm0pPB7hp5QnrTTxA"
+  password: ENV["GMAIL_PASSWORD"]
   }
   # Code is not reloaded between requests.
   config.cache_classes = true

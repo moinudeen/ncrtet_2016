@@ -13,38 +13,30 @@
 <td><%= wicked_pdf_image_tag "sjit.png" %></td>
 <td>
   <center>
-    <h2 >International Conference in Recent Trends and Engineering Technology</h2>
+    <h2 >International Conference on Recent Trends in Engineering and Technology</h2>
     <h4>Organized by</h4>
-    <h2>St.Joseph's Institue of Technology</h2><br><br>
+    <h2>St.Joseph's Institute of Technology</h2><br><br>
     <h3>Conference Ticket</h3>
   </center>
 </td>
 <td><%= wicked_pdf_image_tag "icrtet.png" %></td>
 </table>
 <div class="col-md-12">
+    <b>User ID</b>  :  <%= current_user.payment_detail.user_number%><br>
     <b>First Name</b>  :  <%= current_user.first_name%><br>
     <b>Last Name</b>   :  <%= current_user.last_name%><br>
     <b>Email id</b>    :  <%= current_user.email%><br>
     <b>DD Number</b>   :  <%= current_user.payment_detail.dd_number%><br>
+    <b>Bank Name</b>   :  <%= current_user.payment_detail.bank%><br>
     <b>Amount</b>      :  <%= current_user.payment_detail.amount %><br>
 <br><b>Bring a copy of this while coming to the conference.</b><br>
-<h3>General Information</h3>
 <h4>
-  Submission of Papers</h4>
+  NOTE: </h4>
 <ul>
-<li>      Authors are required to submit their papers (maximum of 8 A4 sized pages) adhering to the IEEE specified format (a copy of which is available for download in the site).</li>
-<li>   Authors must upload their papers onto the conference website.</li>
-<li>      The submitted papers must be original and unpublished.</li>
-<li>      Double blind peer reviews will be followed.</li>
-<li>      Registrations must be done online and a scanned copy of the Demand Draft must be enclosed with it.</li>
-<li>      The DD must be drawn in favour of "St.Joseph's Institute of Technology", payable within Chennai at any nationalised bank.</li>
-<li>      Selected papers will be pubished in Annexure I/Annexure II.</li>
-</ul>
-<h4>Event Registration</h4>
-<ul>
-<li>    The Demand Draft for the required amount must be drawn.</li>
-<li>    The DD number must be entered along with the name of the bank and branch.</li>
-<li>    The scanned copy of the DD must be uploaded.</li>
+<li>If there are multiple authors for a paper, please register individually in order to get separate certificate for each of the authors.</li>
+<li>Bring Original DD for the specified amount.</li>
+<li>Bring Original College ID card or Bonafide certificate to be eligible for student concession.</li>
+<li>Formal Dress code must be followed.</li>
 
 </ul>
 
