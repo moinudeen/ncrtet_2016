@@ -11,8 +11,8 @@ Rails.application.configure do
   #domain: ENV["GMAIL_DOMAIN"],
   authentication: :plain,
   enable_starttls_auto: true,
-  user_name: 'ENV["GMAIL_USER"]',
-  password: 'ENV["GMAIL_PASSWORD"]'
+  user_name: ENV["GMAIL_USER"],
+  password: ENV["GMAIL_PASSWORD"]
   }
 
   # In the development environment your application's code is reloaded on
