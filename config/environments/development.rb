@@ -7,11 +7,12 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address: "smtp.gmail.com",
   port: 587,
-  domain: "icrtet2016.com",
-  authentication: "plain",
+  domain: "gmail.com",
+  #domain: ENV["GMAIL_DOMAIN"],
+  authentication: :plain,
   enable_starttls_auto: true,
-  user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
+  user_name: 'ENV["GMAIL_USER"]',
+  password: 'ENV["GMAIL_PASSWORD"]'
   }
 
   # In the development environment your application's code is reloaded on
