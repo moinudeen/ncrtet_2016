@@ -14,8 +14,8 @@ Rails.application.configure do
   #domain: ENV["GMAIL_DOMAIN"],
   authentication: :plain,
   enable_starttls_auto: true,
-  user_name: 'ENV["GMAIL_USER"]',
-  password: 'ENV["GMAIL_PASSWORD"]'
+  user_name: ENV["GMAIL_USER"],
+  password: ENV["GMAIL_PASSWORD"]
   }
   # Code is not reloaded between requests.
   config.cache_classes = true
