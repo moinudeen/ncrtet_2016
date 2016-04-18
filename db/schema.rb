@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414141949) do
+ActiveRecord::Schema.define(version: 20160418065424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160414141949) do
     t.boolean  "mejsr"
     t.boolean  "wasj"
     t.boolean  "anas"
+    t.boolean  "ijecs"
+    t.boolean  "ijraset"
   end
 
   add_index "journals", ["user_id"], name: "index_journals_on_user_id", using: :btree
@@ -54,8 +56,8 @@ ActiveRecord::Schema.define(version: 20160414141949) do
     t.string   "dd_number"
     t.string   "bank"
     t.string   "branch"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "dd_copy_file_name"
     t.string   "dd_copy_content_type"
     t.integer  "dd_copy_file_size"
@@ -63,9 +65,17 @@ ActiveRecord::Schema.define(version: 20160414141949) do
     t.integer  "user_id"
     t.string   "user_number"
     t.boolean  "accept"
+    t.integer  "students",             default: 0, null: false
+    t.integer  "staff",                default: 0, null: false
   end
 
   add_index "payment_details", ["user_id"], name: "index_payment_details_on_user_id", using: :btree
+
+  create_table "tests", force: :cascade do |t|
+    t.boolean  "vijay"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -85,7 +95,6 @@ ActiveRecord::Schema.define(version: 20160414141949) do
     t.string   "mobile_number"
     t.string   "college_name"
     t.string   "designation"
-    t.string   "dropbox_session"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -46,11 +46,10 @@ def index
   def create
     @payment_detail = PaymentDetail.new(payment_detail_params)
     @payment_detail.user_id = current_user.id
-    if current_user.designation == "  Student  "
-      @payment_detail.amount = 1000
-    elsif current_user.designation == "  Faculty  " || current_user.designation == "  Delegate  " || current_user.designation == "  Research Scholar  "
-      @payment_detail.amount = 1500
-    end
+    @amounts = payment_detail_params[:staff]
+    @amount = payment_detail_params[:students]
+    puts @amounts
+    @payment_detail.amount = @amounts.to_i * 1500 + @amount.to_i  * 1000
     @payment_detail.save
     if @payment_detail.save
       @payment_detail.user_number = "C16#{@payment_detail.id}"
@@ -99,7 +98,7 @@ end
     end
 
     def payment_detail_params
-      params.require(:payment_detail).permit(:amount, :dd_number, :bank, :branch,:dd_copy, :accept)
+      params.require(:payment_detail).permit(:amount, :dd_number, :bank, :branch,:dd_copy, :accept, :staff, :students)
     end
 
 

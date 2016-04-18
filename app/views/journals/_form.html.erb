@@ -23,20 +23,28 @@
   <h4>Annexure-II<br></h4>
   <div class="field">
     <%= f.check_box :mejsr %>
-    <%= f.label :mejsr, "14368 Middle East Journal of Scientific Research 1990-9233" %>
+    <%= f.label :mejsr, "14368 Middle East Journal of Scientific Research 1990-9233 (Rs. 4500/-)" %>
   </div>
   <div class="field">
     <%= f.check_box :wasj %>
-    <%= f.label :wasj, "20400 World Applied Sciences Journal 1818-4952" %>
+    <%= f.label :wasj, "20400 World Applied Sciences Journal 1818-4952 (Rs. 4500/-)" %>
   </div>
   <div class="field">
     <%= f.check_box :anas %>
-    <%= f.label :anas, "559 Advances in Natural and Applied Sciences 1995-0772" %>
+    <%= f.label :anas, "559 Advances in Natural and Applied Sciences 1995-0772 (Rs. 4500/-)" %>
   </div>
-  <h4>Other journal (Doi indexed)<br></h4>
+  <h4>Other journal<br></h4>
+  <div class="field">
+    <%= f.check_box :ijecs%>
+    <%= f.label :ijecs,"International Journal of Engineering and Computer Science (Rs. 1600/-) (Google and DOI Indexed)"  %>
+  </div>
+  <div class="field">
+    <%= f.check_box :ijraset%>
+    <%= f.label :ijraset,"International Journal for Research in Applied Science and Engineering Technology (IJRASET) (Rs. 1200/-) (Google and DOI Indexed)"  %>
+  </div>
   <div class="field">
     <%= f.check_box :others%>
-    <%= f.label :others,"International Journal of Advanced Research in Biology, Engineering, Science and Technology(2395-695X)"  %>
+    <%= f.label :others,"International Journal of Advanced Research in Biology, Engineering, Science and Technology(2395-695X) (Rs. 350/-) (Doi indexed only)"  %>
   </div>
       <% if ! @payment_details %>
         <b>Journal Selection can be done only after registering for the event.<br><br></b>
