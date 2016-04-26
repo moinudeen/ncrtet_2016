@@ -28,4 +28,11 @@ class StaticPagesController < ApplicationController
     )
   end
 
+  def schedule
+    send_file(
+      "#{Rails.root}/public/schedule.pdf",
+      filename: "schedule.pdf",
+      type: "application/pdf"
+    )
+  end
 end
