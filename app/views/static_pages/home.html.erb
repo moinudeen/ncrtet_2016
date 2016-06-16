@@ -1,55 +1,42 @@
 <section id="main-slider" class="no-margin" style="padding-top:0px;">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-      </div>
-      <div class="col-md-2">
-        <a class="popup-with-zoom-anim btn btn-warning" href="#small-dialog" style="color:white;">Journal Details</a>
-      </div>
-      <div class="col-md-2">
-        <%= link_to "Download Brochure", brochure_path,class: "btn btn-warning", style: "color:white;" %>
-      </div>
-      <div class="col-md-4">
-        <%= link_to "Programme and Event Schedule", schedule_path,class: "btn btn-warning", style: "color:white;" %>
-      </div>
-      <div class="col-md-12">
-        <marquee style="color:red;">DD for conference regisration can be uploaded till 24th April, 2016.</marquee>
-      </div>
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>S.No</th>
+          <th>Journal Name</th>
+          <th>Published Article</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>International Journal Of Engineering And Computer Science ISSN: 2319-7242</td>
+          <td><a href="http://ijecs.in/index.php/archive/94-volume-5-issue-05-may-2016" target ="_blank">http://ijecs.in/index.php/archive/94-volume-5-issue-05-may-2016</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>International Journal for Research in Applied Science and Engineering Technology ISSN: 2321-9653</td>
+          <td><a href="http://www.ijraset.com/archive-detail.php?AID=42" target ="_blank">http://www.ijraset.com/archive-detail.php?AID=42</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ISSN: 2321-9653 International Journal of Advanced Research in Biology Engineering Science and Technology ISSN 2395-695X (Print) ISSN 2395-695X (Online)</td>
+          <td><a href="http://ijarbest.com/index.php?option=com_login&amp;view=volumes&amp;fname=spcl14&amp;ftype=conference" target ="_blank">http://ijarbest.com/index.php?option=com_login&amp;view=volumes&amp;fname=spcl14&amp;ftype=conference</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Middle-East Journal of Scientific ISSN: 1990 - 9233 Research</td>
+          <td><a href="http://www.idosi.org/mejsr/mejsr24(RIETMA)16.htm" target ="_blank">http://www.idosi.org/mejsr/mejsr24(RIETMA)16.htm</a></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>World Applied Sciences Journal ISSN: 1818-4952</td>
+          <td><[Link will be updated soon]</td>
+        </tr>
     </div>
   </div>
     <!-- link that opens popup -->
 
-      <!-- form itself -->
-      <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-        <h3 class="center">Journal Details</h3>
-        <table class="table table-striped table-bordered">
-          <tr>
-            <th>S.No.</th>
-            <th>Journal Name</th>
-            <th>Amount</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Journal of Computational and Theoretical Nanoscience( updated list, 1546-1955)</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Middle-East Journal of Scientific Research (Annexure II, 1990-9233)</td>
-            <td>Rs. 4500</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>World Applied Sciences Journal (Annexure II, 1818-4952)</td>
-            <td>Rs. 4500</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>International Journal of Advanced Research in Biology, Engineering, Science and Technology(2395-695X)</td>
-            <td>Rs. 350</td>
-          </tr>
-        </table>
-      </div>
+      
         <div class="carousel slide wet-asphalt">
             <ol class="carousel-indicators">
                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
